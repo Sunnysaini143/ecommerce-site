@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meet Our Specialists</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* In-page CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #131212;
+    }
+    h1 {
+      text-align: center;
+      color: hsl(0, 20%, 99%);
+      margin-top: 10px;
+      padding-top: 20px;
+      font-size: 50px;
+    }
+    section {
+      position: relative;
+      padding: 40px;
+    }
+    section::before {
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(rgb(100, 199, 230), rgb(250, 66, 66));
+      clip-path: circle(20% at 10% 10%);
+    }
+    .team-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 40px 0;
+    }
+    .team-card {
+      max-width: 400px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(31, 26, 26, 0.1);
+      border-radius: 4px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    .team-card img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    .team-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .team-card p {
+      font-size: 16px;
+      color: #080707;
+    }
+    .team-card p2 {
+      font-size: 14px;
+      color: rgb(121, 119, 119);
+    }
+    .team-card .description {
+      font-size: 14px;
+      color: rgb(121, 119, 119);
+      margin-bottom: 10px;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+    .team-card .see-more {
+      display: block;
+      color: #f80707;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .team-card .see-less {
+      display: none;
+      color: #f80707;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .team-card.expand .description {
+      height: auto;
+    }
+    .team-card.expand .see-more {
+      display: none;
+    }
+    .team-card.expand .see-less {
+      display: block;
+    }
+    .team-card.collapse .description {
+      height: 0;
+    }
+    .team-card .social-icons {
+      margin-top: 10px;
+    }
+    .team-card .social-icons a {
+      color: #aa07aa;
+      margin: 0 5px;
+      font-size: 20px;
+    }
+    .team-card .email-icon {
+      margin-top: 10px;
+    }
+    .team-card .email-icon a {
+      color: #158eff; /* Updated color to blue */
+      font-size: 20px;
+      margin: 0 5px;
+    }
+    .team-card .contact-icon {
+      margin-top: 10px;
+    }
+    .team-card .contact-icon a {
+      color: #44f83e; /* Updated color to green */
+      font-size: 20px;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Meet Our Specialists</h1>
+  
+    <div class="team-container">
+      <div class="team-card">
+        <img src="/rudra img/veer.jpg" alt="Member 1">
+        <h3>Yogi Veer Shahi</h3>
+        <p>Yoga Specialist</p>
+        <p2>Yogi Veer Shahi is a renowned yoga specialist with years of experience in various yoga styles and techniques. He has</p2>
+        <div class="description">
+          helped numerous individuals achieve physical and mental well-being through his yoga classes and workshops.
+        </div>
+        <a class="see-more" onclick="toggleDescription(this)">See More...</a>
+        <a class="see-less" onclick="toggleDescription(this)">See Less</a><br>
+        <div class="social-icons">
+          <a href="https://instagram.com/yogwithyogiveer?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+          <a href="veeryogi08@gmail.com" class="email-icon"><i class="far fa-envelope"></i></a>
+          <a href="8077385834" class="contact-icon"><i class="far fa-address-book"></i></a>
+        </div>
+      </div>
+  
+      <div class="team-card">
+        <img src="/rudra img/pandit.jpg" alt="Member 2">
+        <h3>Dheeraj Ruwali</h3>
+        <p>Astrologers (Jyotish)</p>
+        <p2>Dheeraj Ruwali is a skilled astrologer specializing in Jyotish, the ancient Indian astrology system. With his deep knowledge and</p2>
+        <div class="description">
+          expertise, he has guided countless individuals on various aspects of life, including career, relationships, and personal growth.
+        </div>
+        <a class="see-more" onclick="toggleDescription(this)">See More...</a>
+        <a class="see-less" onclick="toggleDescription(this)">See Less</a><br>
+        <div class="social-icons">
+          <a href="https://instagram.com/dhee_rajruwali?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+          <a href="mailto:example@example.com" class="email-icon"><i class="far fa-envelope"></i></a>
+          <a href="7417645201" class="contact-icon"><i class="far fa-address-book"></i></a>
+        </div>
+      </div>
+  
+      <div class="team-card">
+        <img src="/rudra img/heera singh.jpg" alt="Member 3">
+        <h3>Heera Singh</h3>
+        <p>Rudraksha Seller</p>
+        <p2>Heera Singh is a trusted seller of Rudraksha beads, which are highly regarded in Hindu spirituality. He offers a wide range of</p2>
+        <div class="description">
+          authentic Rudraksha beads and provides valuable guidance on their significance and usage for spiritual seekers.
+        </div>
+        <a class="see-more" onclick="toggleDescription(this)">See More...</a>
+        <a class="see-less" onclick="toggleDescription(this)">See Less</a><br>
+        <div class="social-icons">
+          <a href="https://instagram.com/oye_raj_17?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+          <a href="singh5152heera@gmail.com" class="email-icon"><i class="far fa-envelope"></i></a>
+          <a href="9997303829" class="contact-icon"><i class="far fa-address-book"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+    function toggleDescription(button) {
+  const card = button.parentElement;
+  const description = card.querySelector('.description');
+  const seeMore = card.querySelector('.see-more');
+  const seeLess = card.querySelector('.see-less');
+
+  card.classList.toggle('expand');
+
+  if (card.classList.contains('expand')) {
+    description.style.height = 'auto';
+    seeMore.style.display = 'none';
+    seeLess.style.display = 'block';
+  } else {
+    description.style.height = '0';
+    seeMore.style.display = 'block';
+    seeLess.style.display = 'none';
+  }
+}
+
+    </script>
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    *{
+        margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #63e2f8;
+      font-size: 14px;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+    }
+
+.contact-box {
+      display: flex;
+      background: #fff;
+    }
+
+    .contact-left {
+      flex-basis: 60%;    
+      padding: 40pX 60px;
+    }
+    .contact-right {
+      flex-basis: 40%;    
+      padding: 40pX;
+      background: #1c00b5;
+      color: #fff;
+    }
+    h1 {
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+   
+    
+   
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .success-message {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #d4edda;
+      color: #155724;
+      border-radius: 4px;
+    }
+
+    .error-message {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f8d7da;
+      color: #721c24;
+      border-radius: 4px;
+    }
+    .contact-left h3{
+        color: #1c00b5;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .contact-right h3{
+        
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    tr td:first-child{
+        padding-bottom: 18px;
+    }
+    tr td:first-child{
+padding-right: 20px;
+    }
+    tr td:first-child{
+padding-top: 20px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1>Contact Us</h1>
+      <div class="contact-box">
+        <div class="contact-left">
+            <h3>Sent your request</h3>
+            <form id="contactForm" method="post">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Phone</label>
+                    <input type="text" id="email" name="email" required>
+                  </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="successMessage" class="success-message" style="display: none;">Message sent successfully!</div>
+      <div id="errorMessage" class="error-message" style="display: none;">An error occurred. Please try again later.</div>
+        </div>
+        <div class="contact-right">
+        <h3>Contact info</h3>
+        <table>
+            <tr>
+                <td><b>Email:</b></td>
+                <td>rudra123@gmail.com</td>
+            </tr>
+            <tr>
+                <td><b>Phone:</b></td>
+                <td>910 582 3437</td>
+            </tr>
+            <tr>
+                <td><b>Address:</b></td>
+                <td>521 har ki pauri,<br> Haridwar (Uttarakhand)</td>
+            </tr>
+        </table>
+        </div>
+      </div>
+  </div>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var form = event.target;
+      var successMessage = document.getElementById("successMessage");
+      var errorMessage = document.getElementById("errorMessage");
+
+      // Simulate form submission
+      // Replace this code with your actual form submission logic
+
+      // Display success message
+      successMessage.style.display = "block";
+
+      // Reset form fields
+      form.reset();
+    });
+  </script>
+</body>
+</html>

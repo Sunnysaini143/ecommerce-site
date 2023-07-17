@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 400;
 }
 .title-menu {
   position: relative;
@@ -80,7 +80,7 @@
 .logo-item {
   position: absolute;
   top: 10px;
-  left: 149px;
+  left:149px;
   width: 31px;
   height: 15px;
 }
@@ -89,7 +89,7 @@
 }
 .logo {
   position: relative;
-  width: 180px;
+  width: 480px;
   height: 34px;
 }
 .lorem-ipsum-dolor {
@@ -138,7 +138,7 @@
   font-family: var(--font-font-awesome-6-brands);
 }
 .left-footer {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   flex-direction: column;
@@ -149,7 +149,7 @@
 }
 .top-footer {
   position: relative;
-  width: 1320px;
+  width: 1670px;
   height: 213px;
 }
 .coral-inc {
@@ -230,7 +230,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 1px;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -279,8 +279,8 @@
 }
 .instagram1 {
   position: absolute;
-  top: 119px;
-  left: 0;
+  top: 171px;
+  left: -14px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -399,7 +399,6 @@
   left: 0;
   background-color: var(--black-5);
   flex-direction: column;
-  padding: 100px var(--padding-281xl);
   align-items: center;
   gap: 70px;
 }
@@ -688,7 +687,7 @@
 .slider-products {
   position: absolute;
   top: 4082px;
-  left: 300px;
+  left: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -879,7 +878,7 @@
 }
 .products1 {
   position: relative;
-  width: 1320px;
+  width: 109%;
   height: 980px;
   font-size: var(--overline-size);
   color: var(--white);
@@ -887,7 +886,7 @@
 .grid-products {
   position: absolute;
   top: 1885px;
-  left: 300px;
+  left: 74px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -897,7 +896,7 @@
 .explore-new-and {
   position: absolute;
   top: 648px;
-  left: -52px;
+  left: -252px;
   font-size: var(--body-2-size);
   text-transform: uppercase;
   font-family: var(--button);
@@ -998,7 +997,7 @@
 .card22,
 .hot-category {
   position: absolute;
-  left: 1008px;
+  left: 1000px;
   width: 312px;
   height: 312px;
 }
@@ -1012,7 +1011,7 @@
 }
 .hot-category {
   top: 1097px;
-  left: 300px;
+  left: 10px;
   width: 1320px;
   height: 648px;
   font-size: var(--overline-size);
@@ -1043,7 +1042,7 @@
 .image-product-child {
   position: absolute;
   top: 20px;
-  left: 18px;
+  left: 0px;
   border-radius: var(--br-141xl) 0 var(--br-141xl) 0;
   border: 2px solid var(--dark-25);
   box-sizing: border-box;
@@ -1063,20 +1062,20 @@
   overflow: hidden;
 }
 .image-product {
-  left: 784px;
+  left: 534px;
   width: 442px;
   height: 562px;
 }
 .collections,
 .you-can-explore-container {
-  position: absolute;
+  position: relative;
   line-height: 55px;
   text-transform: capitalize;
 }
 .collections {
   top: 0;
   left: 0;
-  font-weight: 300;
+  font-weight:100;
 }
 .you-can-explore-container {
   top: 107px;
@@ -1109,7 +1108,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-5xs);
-  text-align: center;
+  text-align: center; 
   font-size: var(--font-size-5xl);
   color: var(--white);
   font-family: var(--font-font-awesome-6-free);
@@ -1117,7 +1116,7 @@
 .content {
   position: absolute;
   top: 74px;
-  left: 0;
+  left:-269px;
   width: 686px;
   height: 364px;
 }
@@ -1126,14 +1125,14 @@
   position: absolute;
   top: 225px;
   left: 300px;
-  width: 1226px;
+  width: 100%;
   height: 562px;
 }
 .top-main {
   top: 0;
   left: 0;
   background-color: var(--black-5);
-  width: 1920px;
+  width: 100%;
   height: 847px;
   overflow: hidden;
   text-align: left;
@@ -1211,6 +1210,7 @@
   position: relative;
   width: 1320px;
   height: 59px;
+  background-color: #74d0df73;
 }
 .header,
 .menu {
@@ -1228,14 +1228,23 @@
 }
 .header {
   position: absolute;
-  top: 31px;
-  left: 300px;
+  top: 50px;
+  left: 15px;
   flex-direction: column;
   justify-content: flex-start;
   gap: 30px;
   font-size: var(--font-size-xl);
   color: var(--black);
   font-family: var(--font-font-awesome-6-free);
+}
+.mar{
+  font-size: large;
+}
+.section1{
+  position:absolute;
+  width:100%;
+  height:200px;
+  background-color: #7ce2e757;
 }
 .index1 {
   position: relative;
@@ -1248,3 +1257,4 @@
   color: var(--dark);
   font-family: var(--a);
 }
+
