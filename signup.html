@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Signup Page</title>
     <style>
@@ -61,17 +62,92 @@
             color: #007bff;
             text-decoration: none;
         }
+
+        .alert-success {
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
+
 <body>
     <h2>Create New Account</h2>
-    <form action="/signup" method="POST">
+    <form action="/signup" method="POST" onsubmit="submitForm(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
         <label for="mobile">Mobile Number:</label>
         <input type="text" id="mobile" name="mobile" required><br><br>
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" required><br><br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
         <input type="submit" value="Sign Up"><br><br>
     </form>
     <p>Already have an account? <a href="/login.html">Login</a></p>
+        const firebaseConfig = {
+        apiKey: "AIzaSyC154ZjNT5mzCvK6I4R_VjzwbOC51DqtcQ",
+        authDomain: "ecommerce-site-d4bf0.firebaseapp.com",
+        projectId: "ecommerce-site-d4bf0",
+        storageBucket: "ecommerce-site-d4bf0.appspot.com",
+        messagingSenderId: "977127571142",
+        appId: "1:977127571142:web:5d3be7311b498b7eb8e1c7",
+        measurementId: "G-VHBP8169JT",
+      };
+        firebase.initializeApp(firebaseConfi
+        var db = firebase.firestore();
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var mobile = document.getElementById("mobile").value;
+            var email = document.getElementById("email").value;
+            var address = document.getElementById("address").value;
+            var pincode = document.getElementById("pincode").value;
+            var password = document.getElementById("password").value;
+            db.collection("users").add({
+                    username: username,
+                    mobile: mobile,
+                    email: email,
+                    address: address,
+                    pincode: pincode,
+                    password: password
+                })
+                .then(function (docRef) {
+                    showSuccessAlert();
+                    document.getElementById("username").value = "";
+                    document.getElementById("mobile").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("address").value = "";
+                    document.getElementById("pincode").value = "";
+                    document.getElementById("password").value = "";
+
+                    setTimeout(function () {
+                        window.location.href = "index2.html";
+                    }, 3000); 
+                })
+                .catch(function (error) {
+                    console.error("Error adding document: ", error);
+                });
+        }
+
+        function showSuccessAlert() {
+            var successAlert = document.createElement("div");
+            successAlert.className = "alert-success";
+            successAlert.innerHTML = "Registration successful! You can now <a href='/login.html'>login</a>.";
+            document.body.appendChild(successAlert);
+        }
+    </script>
 </body>
+
 </html>
+
+
