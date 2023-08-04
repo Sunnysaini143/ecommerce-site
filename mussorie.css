@@ -125,5 +125,24 @@
       }
     }
     
-   
+    .menu {
+      background-color: black;
+      display: flex;
+    }
+    
+    .item-menu1 {
+      margin-right: 20px;
+    }
+    
+    .item a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+    
+    .item a:hover {
+      background-color: white;
+      color: black;
+    }
+    
     
